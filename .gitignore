@@ -1,0 +1,19 @@
+# Node modules dans tous les templates
+**/node_modules/
+
+# Dossiers de build React
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environnement
+.env
+.env.local
