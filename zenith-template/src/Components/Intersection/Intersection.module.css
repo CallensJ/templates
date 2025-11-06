@@ -1,0 +1,114 @@
+.breakSection {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ========================================
+   OVERLAY
+======================================== */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 195, 161, 0.3),
+    rgba(217, 204, 190, 0.3)
+  );
+  z-index: 1;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+.quote {
+  font-family: var(--font-title);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-accent-dark);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 4rem;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  color: var(--color-secondary);
+  opacity: 0.3;
+}
+
+.author {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 300;
+  color: var(--color-accent-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .breakSection {
+    height: 50vh;
+    min-height: 350px;
+    background-attachment: scroll;
+  }
+
+  .content {
+    padding: 0 30px;
+  }
+
+  .quote::before {
+    font-size: 3rem;
+    top: -20px;
+    left: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breakSection {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .quote::before {
+    font-size: 2.5rem;
+    top: -15px;
+    left: -10px;
+  }
+}

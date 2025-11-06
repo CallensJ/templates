@@ -1,0 +1,329 @@
+/* ============================================
+   PRESENTATION SECTION - AURELIA TEMPLATE
+   ============================================ */
+
+.presentation {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-bg-primary);
+  position: relative;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-family: var(--font-title);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-subtitle);
+  font-size: var(--fs-body);
+  font-style: italic;
+  color: var(--color-details);
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   CONTENT GRID
+   ============================================ */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* ============================================
+   BIOGRAPHY TEXT
+   ============================================ */
+.bioContent {
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.bioParagraph {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.bioParagraph:first-of-type::first-letter {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  color: var(--color-accent-gold);
+}
+
+.bioParagraph:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   IMAGE GALLERY - OVERLAPPING LAYOUT
+   ============================================ */
+.imageGallery {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.imageWrapper {
+  position: absolute;
+  transition: all var(--transition-medium);
+  cursor: pointer;
+}
+
+/* Image positioning - overlapping cascade */
+.image1 {
+  top: 0;
+  left: 0;
+  width: 55%;
+  z-index: 1;
+}
+
+.image2 {
+  top: 10%;
+  right: 5%;
+  width: 48%;
+  z-index: 2;
+}
+
+.image3 {
+  bottom: 15%;
+  left: 10%;
+  width: 45%;
+  z-index: 3;
+}
+
+.image4 {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  z-index: 4;
+}
+
+/* Hover effect - bring to front */
+.imageWrapper:hover {
+  z-index: 10 !important;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   IMAGE CONTAINER
+   ============================================ */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border: 2px solid var(--color-accent-gold);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-medium);
+}
+
+.imageWrapper:hover .imageContainer {
+  box-shadow: 0 8px 40px rgba(198, 166, 100, 0.5);
+  border-color: var(--color-hover-light);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.15);
+}
+
+/* Image overlay */
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 14, 14, 0.1) 0%,
+    rgba(14, 14, 14, 0.6) 100%
+  );
+  transition: opacity var(--transition-medium);
+}
+
+.imageWrapper:hover .imageOverlay {
+  opacity: 0.3;
+}
+
+/* ============================================
+   IMAGE CAPTION
+   ============================================ */
+.imageCaption {
+  font-family: var(--font-subtitle);
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-style: italic;
+  color: var(--color-accent-gold);
+  text-align: center;
+  margin-top: 0.75rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  pointer-events: none;
+}
+
+.captionVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  .contentGrid {
+    gap: var(--spacing-lg);
+  }
+  
+  .imageGallery {
+    height: 500px;
+  }
+  
+  .image1 {
+    width: 52%;
+  }
+  
+  .image2 {
+    width: 46%;
+  }
+  
+  .image3 {
+    width: 48%;
+  }
+  
+  .image4 {
+    width: 50%;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .presentation {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .bioParagraph {
+    text-align: left;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .bioParagraph:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+  
+  /* Mobile gallery - stacked with smaller overlap */
+  .imageGallery {
+    height: 550px;
+    margin-top: var(--spacing-md);
+  }
+  
+  .image1 {
+    top: 0;
+    left: 5%;
+    width: 65%;
+    z-index: 4;
+  }
+  
+  .image2 {
+    top: 15%;
+    right: 5%;
+    width: 60%;
+    z-index: 3;
+  }
+  
+  .image3 {
+    bottom: 20%;
+    left: 10%;
+    width: 58%;
+    z-index: 2;
+  }
+  
+  .image4 {
+    bottom: 0;
+    right: 8%;
+    width: 62%;
+    z-index: 1;
+  }
+  
+  .imageWrapper:hover {
+    transform: scale(1.03);
+  }
+  
+  .imageWrapper:hover .image {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGallery {
+    height: 500px;
+  }
+  
+  .image1,
+  .image2,
+  .image3,
+  .image4 {
+    width: 70%;
+  }
+  
+  .imageCaption {
+    font-size: 0.875rem;
+  }
+}

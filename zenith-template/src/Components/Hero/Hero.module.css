@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ========================================
+   OVERLAY
+======================================== */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 229, 229, 0.4);
+  z-index: 1;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-family: var(--font-title);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 500;
+  color: var(--color-accent-dark);
+  margin-bottom: 30px;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 300;
+  color: var(--color-accent-dark);
+  margin-bottom: 50px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.cta {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-accent-dark);
+  background-color: transparent;
+  border: 2px solid var(--color-accent-dark);
+  padding: 15px 50px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: var(--color-hover);
+  border-color: var(--color-hover);
+  color: white;
+}
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-accent-dark),
+    transparent
+  );
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .content h1 {
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    margin-bottom: 40px;
+  }
+
+  .cta {
+    padding: 12px 40px;
+    font-size: 0.9rem;
+  }
+
+  .scrollIndicator {
+    bottom: 30px;
+  }
+
+  .scrollLine {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 12px 35px;
+    font-size: 0.85rem;
+  }
+}

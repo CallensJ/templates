@@ -1,0 +1,160 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+  transition: var(--transition-smooth);
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: rgba(250, 250, 250, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-accent-dark);
+  letter-spacing: 0.05em;
+  transition: var(--transition-smooth);
+}
+
+.logo:hover {
+  color: var(--color-hover);
+}
+
+/* ========================================
+   MENU DESKTOP
+======================================== */
+
+.menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.menu li button {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-accent-dark);
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: var(--transition-smooth);
+  padding: 5px 0;
+}
+
+.menu li button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-hover);
+  transition: width 0.3s ease;
+}
+
+.menu li button:hover {
+  color: var(--color-hover);
+}
+
+.menu li button:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   BURGER MENU (Mobile)
+======================================== */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-accent-dark);
+  transition: var(--transition-smooth);
+}
+
+/* ========================================
+   RESPONSIVE MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: var(--color-accent-light);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+  }
+
+  .menu.menuOpen {
+    right: 0;
+  }
+
+  .menu li button {
+    font-size: 1.25rem;
+  }
+
+  .menu li button::after {
+    display: none;
+  }
+}
+
+/* ========================================
+   ANIMATION ENTRÉE
+======================================== */
+
+.navbar {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

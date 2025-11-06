@@ -1,0 +1,301 @@
+/* ============================================
+   HERO SECTION - AURELIA TEMPLATE
+   ============================================ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ============================================
+   BACKGROUND IMAGE
+   ============================================ */
+.heroBackground {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  z-index: 1;
+}
+
+/* ============================================
+   OVERLAY
+   ============================================ */
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 14, 14, 0.6) 0%,
+    rgba(14, 14, 14, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* ============================================
+   CONTENT
+   ============================================ */
+.heroContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 var(--container-padding);
+  max-width: 900px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   LOGO SYMBOL
+   ============================================ */
+.logoSymbol {
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
+  margin: 0 auto 2rem;
+  color: var(--color-accent-gold);
+  animation: shimmer 3s ease-in-out infinite, fadeIn 1s ease-out;
+  filter: drop-shadow(0 0 15px rgba(198, 166, 100, 0.4));
+}
+
+.logoSymbol svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px rgba(198, 166, 100, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(234, 212, 139, 0.6));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   TITLE
+   ============================================ */
+.heroTitle {
+  font-family: var(--font-title);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(198, 166, 100, 0.4);
+  animation: fadeInUp 1.2s ease-out 0.2s backwards;
+}
+
+/* ============================================
+   TAGLINE
+   ============================================ */
+.heroTagline {
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  animation: fadeInUp 1.2s ease-out 0.4s backwards;
+}
+
+/* ============================================
+   SOCIAL LINKS
+   ============================================ */
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  animation: fadeInUp 1.2s ease-out 0.6s backwards;
+}
+
+.socialIcon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent-gold);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.socialIcon svg {
+  width: 100%;
+  height: 100%;
+  transition: all var(--transition-fast);
+}
+
+.socialIcon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198, 166, 100, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.socialIcon:hover {
+  color: var(--color-hover-light);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 15px rgba(234, 212, 139, 0.6));
+}
+
+.socialIcon:hover::before {
+  opacity: 1;
+}
+
+.socialIcon:hover svg {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+.scrollIndicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  color: var(--color-accent-gold);
+  animation: bounce 2s ease-in-out infinite, fadeIn 1.5s ease-out 1s backwards;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.scrollIndicator svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.scrollIndicator:hover {
+  color: var(--color-hover-light);
+  filter: drop-shadow(0 0 10px rgba(234, 212, 139, 0.5));
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  .heroTitle {
+    letter-spacing: 0.15em;
+  }
+  
+  .socialLinks {
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+  
+  .heroBackground {
+    background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1287');
+    background-position: center center;
+  }
+  
+  .logoSymbol {
+    margin-bottom: 1.5rem;
+  }
+  
+  .heroTitle {
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  
+  .heroTagline {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .socialLinks {
+    gap: 1.25rem;
+  }
+  
+  .socialIcon {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .scrollIndicator {
+    bottom: 2rem;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTagline {
+    font-size: 1rem;
+  }
+  
+  .socialLinks {
+    gap: 1rem;
+  }
+  
+  .socialIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
