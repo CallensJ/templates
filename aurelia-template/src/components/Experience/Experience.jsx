@@ -1,4 +1,4 @@
-import styles from './experience.module.css';
+import styles from './Experience.module.css';
 
 const SavoirFaire = () => {
   const skillsData = [
