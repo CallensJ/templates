@@ -1,0 +1,589 @@
+/* ============================================
+   COLLECTION SECTION - AURELIA TEMPLATE
+   ============================================ */
+
+.collection {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-bg-primary);
+  position: relative;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-family: var(--font-title);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-subtitle);
+  font-size: var(--fs-body);
+  font-style: italic;
+  color: var(--color-details);
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   MASONRY GRID
+   ============================================ */
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.masonryItem {
+  position: relative;
+  cursor: pointer;
+  transition: transform var(--transition-medium);
+}
+
+.masonryItem:hover {
+  transform: translateY(-5px);
+}
+
+/* Height variations for masonry effect */
+.tall {
+  grid-row: span 2;
+}
+
+.medium {
+  grid-row: span 1;
+}
+
+/* ============================================
+   IMAGE CONTAINER
+   ============================================ */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-accent-gold);
+  transition: all var(--transition-medium);
+}
+
+.masonryItem:hover .imageContainer {
+  border-color: var(--color-hover-light);
+  box-shadow: 0 8px 30px rgba(198, 166, 100, 0.4);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.masonryItem:hover .image {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   OVERLAY
+   ============================================ */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 14, 14, 0.3) 0%,
+    rgba(14, 14, 14, 0.9) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+}
+
+.overlayVisible {
+  opacity: 1;
+}
+
+.itemTitle {
+  font-family: var(--font-title);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform var(--transition-medium);
+}
+
+.overlayVisible .itemTitle {
+  transform: translateY(0);
+}
+
+/* ============================================
+   INSTAGRAM CTA
+   ============================================ */
+.instagramCta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.instagramButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.938rem, 1.2vw, 1.063rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  border: 2px solid var(--color-accent-gold);
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.instagramButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent-gold);
+  transition: left var(--transition-medium);
+  z-index: -1;
+}
+
+.instagramButton:hover {
+  color: var(--color-bg-primary);
+  border-color: var(--color-hover-light);
+  box-shadow: 0 0 25px rgba(198, 166, 100, 0.5);
+  transform: translateY(-2px);
+}
+
+.instagramButton:hover::before {
+  left: 0;
+}
+
+.instagramIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-fast);
+}
+
+.instagramButton:hover .instagramIcon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  .masonryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .overlay {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .collection {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .masonryGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Reset grid-row spans for mobile */
+  .tall,
+  .medium {
+    grid-row: span 1;
+  }
+  
+  .masonryItem {
+    height: 400px;
+  }
+  
+  .overlay {
+    padding: 1.5rem 1rem;
+  }
+  
+  .itemTitle {
+    font-size: 1rem;
+  }
+  
+  .instagramButton {
+    padding: 0.875rem 2rem;
+    font-size: 0.938rem;
+  }
+  
+  .instagramIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonryGrid {
+    gap: 1rem;
+  }
+  
+  .masonryItem {
+    height: 350px;
+  }
+  
+  .instagramButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+  }
+  
+  .instagramIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 14, 14, 0.97);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   LIGHTBOX CONTENT
+   ============================================ */
+.lightboxContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scaleIn 0.4s ease-out;
+  cursor: default;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid var(--color-accent-gold);
+  box-shadow: 0 0 50px rgba(198, 166, 100, 0.3);
+}
+
+/* ============================================
+   LIGHTBOX INFO
+   ============================================ */
+.lightboxInfo {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 2rem;
+}
+
+.lightboxTitle {
+  font-family: var(--font-title);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.lightboxDescription {
+  font-family: var(--font-subtitle);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  font-style: italic;
+}
+
+/* ============================================
+   CLOSE BUTTON
+   ============================================ */
+.closeButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--color-accent-gold);
+  border-radius: 50%;
+  color: var(--color-accent-gold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.closeButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.closeButton:hover {
+  background-color: var(--color-accent-gold);
+  color: var(--color-bg-primary);
+  transform: rotate(90deg);
+  box-shadow: 0 0 20px rgba(198, 166, 100, 0.5);
+}
+
+/* ============================================
+   NAVIGATION BUTTONS
+   ============================================ */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(14, 14, 14, 0.8);
+  border: 2px solid var(--color-accent-gold);
+  border-radius: 50%;
+  color: var(--color-accent-gold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.navButton svg {
+  width: 28px;
+  height: 28px;
+}
+
+.navButton:hover {
+  background-color: var(--color-accent-gold);
+  color: var(--color-bg-primary);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(198, 166, 100, 0.6);
+}
+
+.prevButton {
+  left: 2rem;
+}
+
+.nextButton {
+  right: 2rem;
+}
+
+/* ============================================
+   LIGHTBOX RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .lightboxImage {
+    max-height: 65vh;
+  }
+  
+  .lightboxInfo {
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .navButton {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .navButton svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .prevButton {
+    left: 1.5rem;
+  }
+  
+  .nextButton {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightboxContent {
+    max-width: 95vw;
+  }
+  
+  .lightboxImage {
+    max-height: 60vh;
+  }
+  
+  .lightboxInfo {
+    margin-top: 1.25rem;
+    padding: 0 1rem;
+  }
+  
+  .lightboxTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .lightboxDescription {
+    font-size: 0.938rem;
+  }
+  
+  .closeButton {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .closeButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .navButton {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .navButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .prevButton {
+    left: 1rem;
+  }
+  
+  .nextButton {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightboxImage {
+    max-height: 55vh;
+  }
+  
+  .lightboxInfo {
+    margin-top: 1rem;
+  }
+  
+  .lightboxTitle {
+    font-size: 1.125rem;
+  }
+  
+  .lightboxDescription {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .closeButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navButton svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .prevButton {
+    left: 0.5rem;
+  }
+  
+  .nextButton {
+    right: 0.5rem;
+  }
+}

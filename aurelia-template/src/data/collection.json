@@ -1,0 +1,67 @@
+{
+  "collectionItems": [
+    {
+      "id": 1,
+      "url": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1287",
+      "title": "Collier Elvenstar",
+      "description": "Inspiré des étoiles elfiques, ce collier en or 18 carats capture la lumière comme un fragment de ciel nocturne. Chaque détail évoque la magie ancestrale des forêts perdues.",
+      "height": "tall"
+    },
+    {
+      "id": 2,
+      "url": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1470",
+      "title": "Bague Lumière Nocturne",
+      "description": "Une pierre de lune sertie dans un anneau d'argent massif. Cette bague mystérieuse reflète les phases lunaires et accompagne ceux qui marchent entre ombre et clarté.",
+      "height": "medium"
+    },
+    {
+      "id": 3,
+      "url": "https://images.unsplash.com/photo-1603561596112-0a132b757442?q=80&w=1470",
+      "title": "Bracelet Serpent d'Or",
+      "description": "Symbole de transformation et de renaissance, ce bracelet aux courbes sinueuses épouse délicatement le poignet. Chaque écaille est travaillée à la main avec une précision millimétrique.",
+      "height": "tall"
+    },
+    {
+      "id": 4,
+      "url": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1287",
+      "title": "Couronne Éthérée",
+      "description": "Diadème léger comme l'air, tissé de fils d'or blanc et orné de cristaux de quartz. Destiné aux âmes royales qui règnent sur leur propre destin.",
+      "height": "tall"
+    },
+    {
+      "id": 5,
+      "url": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070",
+      "title": "Pendentif Lunaire",
+      "description": "Ce pendentif en forme de croissant de lune renferme une opale noire qui semble contenir les mystères de l'univers. Une pièce pour les rêveurs et les gardiens de secrets.",
+      "height": "medium"
+    },
+    {
+      "id": 6,
+      "url": "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1287",
+      "title": "Boucles Célestes",
+      "description": "Légères et élégantes, ces boucles d'oreilles en or rose capturent l'essence des constellations. Chaque mouvement fait danser la lumière comme des étoiles filantes.",
+      "height": "medium"
+    },
+    {
+      "id": 7,
+      "url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1287",
+      "title": "Anneau du Crépuscule",
+      "description": "Entre jour et nuit, cet anneau mêle or jaune et or blanc dans une alliance parfaite. Serti d'un saphir étoilé, il symbolise l'équilibre entre deux mondes.",
+      "height": "tall"
+    },
+    {
+      "id": 8,
+      "url": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1287",
+      "title": "Chaîne Mystique",
+      "description": "Une chaîne en argent vieilli aux maillons complexes, chaque élément racontant une histoire différente. Portée comme un talisman de protection contre les forces obscures.",
+      "height": "tall"
+    },
+    {
+      "id": 9,
+      "url": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1287",
+      "title": "Diadème Ancestral",
+      "description": "Inspiré des ornements des anciennes dynasties, ce diadème en or rouge est incrusté de grenats et de perles d'eau douce. Une pièce d'héritage pour les âmes d'exception.",
+      "height": "medium"
+    }
+  ]
+}
