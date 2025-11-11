@@ -1,7 +1,7 @@
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import styles from './Services.module.css';
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import styles from "./Services.module.css";
 
 const Services = () => {
   const ref = useRef(null);
@@ -10,22 +10,25 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      icon: 'brush-outline',
-      title: 'Créations sur mesure',
-      description: 'Conception de pièces uniques adaptées à vos besoins et à votre univers personnel.'
+      icon: "brush-outline",
+      title: "Créations sur mesure",
+      description:
+        "Etiam eget dui quis neque blandit blandit eu id leo. Sed vel pulvinar turpis.",
     },
     {
       id: 2,
-      icon: 'calendar-outline',
-      title: 'Accompagnement dédié',
-      description: 'Suivi personnalisé et conseils pour vous guider dans votre démarche avec bienveillance.'
+      icon: "calendar-outline",
+      title: "Accompagnement dédié",
+      description:
+        "Curabitur feugiat sapien consectetur felis finibus, ac finibus quam egestas.",
     },
     {
       id: 3,
-      icon: 'leaf-outline',
-      title: 'Formules découverte',
-      description: 'Offres d\'initiation pensées pour vous permettre de découvrir mon approche en douceur.'
-    }
+      icon: "leaf-outline",
+      title: "Formules découverte",
+      description:
+        "Curabitur eu lacus tincidunt, ornare nunc at, blandit nisl. ",
+    },
   ];
 
   const containerVariants = {
@@ -33,55 +36,57 @@ const Services = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
-    }
+      transition: { duration: 0.6 },
+    },
   };
 
   return (
     <section id="services" className={styles.services} ref={ref}>
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           className={styles.intro}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <h2>Services & Prestations</h2>
-          
+
           <p>
-            Chaque prestation est pensée pour répondre à vos besoins spécifiques, 
-            dans le respect de votre rythme et de vos attentes. Que vous recherchiez 
-            une création artisanale unique, un accompagnement personnalisé ou simplement 
-            une première approche de mon travail, je m'adapte à votre projet avec 
-            attention et disponibilité.
+            Quisque ut purus congue, laoreet arcu a, rutrum ante. Aliquam
+            condimentum, arcu suscipit venenatis congue, urna tellus varius
+            ante, sed molestie mi eros quis purus.
           </p>
-          
+
           <p>
-            Mon approche privilégie l'écoute, la transparence et la qualité. 
-            Chaque collaboration débute par un échange approfondi pour cerner vos 
-            envies et définir ensemble la prestation qui vous correspondra le mieux. 
-            L'objectif est de créer une expérience sur mesure, à votre image.
+            Cras dignissim feugiat est, id luctus nulla porttitor ac. Curabitur
+            eu lacus tincidunt, ornare nunc at, blandit nisl. Proin mattis
+            mattis semper. Nullam non nisi leo. Morbi tristique magna vitae eros
+            scelerisque, eu pellentesque tortor blandit. Sed ultricies, velit
+            quis consectetur commodo, tellus ex viverra velit, non pharetra leo
+            dolor ornare odio. Nulla facilisi. Integer feugiat est lectus, ut
+            pretium enim tincidunt eu. Praesent gravida, felis quis convallis
+            dictum, metus dolor malesuada magna, eu convallis diam justo et sem.
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className={styles.grid}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           {services.map((service) => (
-            <motion.div 
+            <motion.div
               key={service.id}
               className={styles.card}
               variants={itemVariants}

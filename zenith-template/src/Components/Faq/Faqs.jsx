@@ -11,28 +11,28 @@ const FAQ = () => {
   const faqs = [
     {
       id: 1,
-      question: 'Comment se déroule la première prise de contact ?',
-      answer: 'Nous échangeons d\'abord par email ou téléphone pour définir vos besoins et attentes. Cet échange initial est gratuit et sans engagement. Il me permet de comprendre votre projet et de vous proposer une approche personnalisée.'
+      question: 'Morbi gravida urna ut ipsum pulvinar convallis.?',
+      answer: 'Nulla sollicitudin nunc ut hendrerit laoreet. Integer tempus ante a gravida aliquet. Aliquam erat volutpat. Pellentesque aliquam scelerisque cursus.'
     },
     {
       id: 2,
-      question: 'Quels sont les délais de réalisation ?',
-      answer: 'Les délais varient selon la nature et la complexité de votre projet. En général, comptez entre 2 et 6 semaines. Je m\'engage à vous communiquer un planning précis dès notre premier échange et à respecter les échéances convenues ensemble.'
+      question: 'Cras dignissim feugiat est, id luctus nulla porttitor ac   ?',
+      answer: 'Aliquam tincidunt erat sem, vitae eleifend nisi ultrices in. Etiam hendrerit maximus vestibulum. Proin et justo dolor. Curabitur luctus mauris sed magna volutpat tristique. Pellentesque sit amet nibh rutrum, iaculis purus quis, dignissim urna. Aliquam accumsan, est at vehicula tempor, turpis mi rhoncus tortor'
     },
     {
       id: 3,
-      question: 'Proposez-vous des formules sur mesure ?',
-      answer: 'Absolument. Chaque projet est unique et mérite une attention particulière. Je m\'adapte à vos besoins spécifiques, votre budget et vos contraintes pour créer une prestation qui vous correspond parfaitement.'
+      question: 'Praesent maximus hendrerit mauris, eget ullamcorper neque?',
+      answer: 'rcu a, rutrum ante. Aliquam condimentum, arcu suscipit venenatis congue, urna tellus varius ante, sed molestie mi eros quis purus.'
     },
     {
       id: 4,
-      question: 'Travaillez-vous avec des particuliers et des professionnels ?',
-      answer: 'Oui, j\'accompagne aussi bien les particuliers que les professionnels (artisans, thérapeutes, petites entreprises). Mon approche s\'adapte à chaque type de clientèle avec la même exigence de qualité.'
+      question: ' Vivamus efficitur neque sit amet congue mollis ?',
+      answer: 'Curabitur feugiat sapien consectetur felis finibus, ac finibus quam egestas. Sed eu tellus nulla. Aenean ac mauris porta, placerat ante ac, viverra lorem. Integer porttitor porta urna, a ornare est ullamcorper ac.'
     },
     {
       id: 5,
-      question: 'Comment se passe le paiement ?',
-      answer: 'Je demande généralement un acompte de 30% à la validation du projet, puis le solde à la livraison. D\'autres modalités peuvent être convenues ensemble selon votre situation. Toutes les conditions sont clairement définies avant le début du projet.'
+      question: 'Duis pharetra mauris quis ligula porta sollicitudin.?',
+      answer: ' Donec ut sem in dolor porttitor blandit. Proin at erat interdum, hendrerit nisi eget, dapibus quam. In eu elit tincidunt, consequat elit et, vehicula quam. Ut ut consequat nisl.'
     }
   ];
 
