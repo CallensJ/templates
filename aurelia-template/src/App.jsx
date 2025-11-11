@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Presentation from './components/presentation/Presentation'
 import Experience from './components/Experience/Experience';
 import './globals.css'
+import Atelier from './components/Atelier/Atelier';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Presentation />
       <Collection />
       <Experience />
+      <Atelier />
     </>
   )
 }

@@ -1,0 +1,366 @@
+/* ============================================
+   ATELIER SECTION - AURELIA TEMPLATE
+   ============================================ */
+
+   .atelier {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  /* ============================================
+     SECTION HEADER
+     ============================================ */
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sectionTitle {
+    font-family: var(--font-title);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionSubtitle {
+    font-family: var(--font-subtitle);
+    font-size: var(--fs-body);
+    font-style: italic;
+    color: var(--color-details);
+    letter-spacing: 0.03em;
+  }
+  
+  /* ============================================
+     ATELIER CONTENT
+     ============================================ */
+  .atelierContent {
+    position: relative;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ============================================
+     IMAGE GALLERY - ORGANIC POSITIONING
+     ============================================ */
+  .imageGallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .ambientImage {
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid var(--color-accent-gold);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-medium);
+    cursor: pointer;
+  }
+  
+  .ambientImage:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 40px rgba(198, 166, 100, 0.5);
+    border-color: var(--color-hover-light);
+    z-index: 10;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+  
+  .ambientImage:hover .image {
+    transform: scale(1.1);
+  }
+  
+  /* Size variations */
+  .small {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .medium {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .large {
+    width: 280px;
+    height: 320px;
+  }
+  
+  /* Organic positioning - each image has specific coordinates */
+  .ambientImage:nth-child(1) {
+    top: 5%;
+    left: 5%;
+    animation: fadeIn 0.8s ease-out 0.2s backwards;
+  }
+  
+  .ambientImage:nth-child(2) {
+    top: 8%;
+    right: 8%;
+    animation: fadeIn 0.8s ease-out 0.3s backwards;
+  }
+  
+  .ambientImage:nth-child(3) {
+    top: 15%;
+    right: 18%;
+    animation: fadeIn 0.8s ease-out 0.4s backwards;
+  }
+  
+  .ambientImage:nth-child(4) {
+    top: 45%;
+    left: 3%;
+    animation: fadeIn 0.8s ease-out 0.5s backwards;
+  }
+  
+  .ambientImage:nth-child(5) {
+    bottom: 25%;
+    left: 8%;
+    animation: fadeIn 0.8s ease-out 0.6s backwards;
+  }
+  
+  .ambientImage:nth-child(6) {
+    bottom: 15%;
+    right: 5%;
+    animation: fadeIn 0.8s ease-out 0.7s backwards;
+  }
+  
+  .ambientImage:nth-child(7) {
+    top: 50%;
+    right: 8%;
+    animation: fadeIn 0.8s ease-out 0.8s backwards;
+  }
+  
+  .ambientImage:nth-child(8) {
+    bottom: 5%;
+    left: 15%;
+    animation: fadeIn 0.8s ease-out 0.9s backwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* ============================================
+     CENTRAL TEXT
+     ============================================ */
+  .centralText {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  }
+  
+  .textCard {
+    max-width: 600px;
+    padding: var(--spacing-lg);
+    background: rgba(14, 14, 14, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-accent-gold);
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.8);
+    position: relative;
+  }
+  
+  .textCard::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-gold) 0%,
+      transparent 50%,
+      var(--color-accent-gold) 100%
+    );
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .paragraph {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.9;
+    color: var(--color-text-primary);
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .paragraph:last-child {
+    margin-bottom: 0;
+  }
+  
+  .paragraph:first-of-type::first-letter {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    line-height: 1;
+    float: left;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+    color: var(--color-accent-gold);
+  }
+  
+  /* ============================================
+     RESPONSIVE - TABLET
+     ============================================ */
+  @media (max-width: 1024px) {
+    .atelierContent {
+      min-height: 700px;
+    }
+    
+    .small {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .medium {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .large {
+      width: 240px;
+      height: 280px;
+    }
+    
+    .textCard {
+      max-width: 500px;
+      padding: var(--spacing-md);
+    }
+    
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ============================================
+     RESPONSIVE - MOBILE
+     ============================================ */
+  @media (max-width: 768px) {
+    .atelier {
+      padding: var(--spacing-xl) 0;
+    }
+    
+    .sectionHeader {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .atelierContent {
+      min-height: auto;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+    
+    /* Stack images in a simple grid on mobile */
+    .imageGallery {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      width: 100%;
+      height: auto;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .ambientImage {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+      width: 100% !important;
+      height: 200px !important;
+    }
+    
+    .ambientImage:hover {
+      transform: scale(1.03) !important;
+    }
+    
+    .centralText {
+      position: relative;
+      width: 100%;
+    }
+    
+    .textCard {
+      max-width: 100%;
+      padding: var(--spacing-md);
+    }
+    
+    .paragraph {
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .paragraph:first-of-type::first-letter {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .imageGallery {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    
+    .ambientImage {
+      height: 220px !important;
+    }
+    
+    .textCard {
+      padding: var(--spacing-sm);
+    }
+    
+    .paragraph {
+      font-size: 0.938rem;
+      line-height: 1.7;
+    }
+    
+    .paragraph:first-of-type::first-letter {
+      font-size: 2rem;
+    }
+  }
