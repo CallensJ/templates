@@ -1,5 +1,10 @@
 fetch('../data/templates.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
     const grid = document.getElementById('template-grid');
     data.forEach(template => {
@@ -14,4 +19,7 @@ fetch('../data/templates.json')
       `;
       grid.appendChild(card);
     });
+  })
+  .catch(error => {
+    console.error('Erreur lors du chargement des templates :', error);
   });
