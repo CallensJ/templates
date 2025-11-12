@@ -1,4 +1,4 @@
-fetch('../data/templates.json')
+fetch('/templates.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);
