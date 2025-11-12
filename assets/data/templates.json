@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Zenith",
+    "theme": "Bien-être",
+    "url": "https://zenith-one-livid.vercel.app/",
+    "description": "Un template apaisant pour les praticiens du bien-être. Couleurs douces, navigation fluide.",
+    "image": "../../assets/images/zenith-template.png"
+  },
+  {
+    "name": "Aurelia",
+    "theme": "Luxe",
+    "url": "https://aurelia-rouge.vercel.app/",
+    "description": "Design raffiné pour marques haut de gamme. Typographie élégante, ambiance premium.",
+    "image": "../../assets/images/aurelia-template.png"
+  }
+]
