@@ -6,6 +6,9 @@ import Presentation from './components/presentation/Presentation'
 import Experience from './components/Experience/Experience';
 import './globals.css'
 import Atelier from './components/Atelier/Atelier';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
 
@@ -18,6 +21,8 @@ function App() {
       <Collection />
       <Experience />
       <Atelier />
+      <Contact />
+      <Footer />
     </>
   )
 }
