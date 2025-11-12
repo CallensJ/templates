@@ -1,4 +1,4 @@
-fetch('../../assets/data/templates.json')
+fetch('../data/templates.json')
   .then(response => response.json())
   .then(data => {
     const grid = document.getElementById('template-grid');
