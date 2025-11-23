@@ -26,31 +26,31 @@
     },
     {
       "id": 3,
-      "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop",
-      "alt": "Paysage montagne brume",
-      "category": "paysage",
-      "title": "Misty Mountains"
-    },
-    {
-      "id": 4,
-      "url": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1934&auto=format&fit=crop",
-      "alt": "Architecture moderne géométrique",
-      "category": "architecture",
-      "title": "Geometric Lines"
-    },
-    {
-      "id": 5,
-      "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop",
-      "alt": "Street photography ville de nuit",
-      "category": "street",
-      "title": "Night Lights"
-    },
-    {
-      "id": 6,
       "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
       "alt": "Portrait homme chemise blanche",
       "category": "portrait",
       "title": "Classic Portrait"
+    },
+    {
+      "id": 4,
+      "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Portrait femme cheveux longs",
+      "category": "portrait",
+      "title": "Elegant Portrait"
+    },
+    {
+      "id": 5,
+      "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
+      "alt": "Portrait femme moderne",
+      "category": "portrait",
+      "title": "Modern Beauty"
+    },
+    {
+      "id": 6,
+      "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop",
+      "alt": "Paysage montagne brume",
+      "category": "paysage",
+      "title": "Misty Mountains"
     },
     {
       "id": 7,
@@ -61,38 +61,94 @@
     },
     {
       "id": 8,
-      "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop",
-      "alt": "Architecture bâtiment moderne ciel bleu",
-      "category": "architecture",
-      "title": "Blue Sky Building"
-    },
-    {
-      "id": 9,
       "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1944&auto=format&fit=crop",
       "alt": "Paysage ville coucher de soleil",
       "category": "paysage",
       "title": "Sunset City"
     },
     {
+      "id": 9,
+      "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Paysage forêt rayons de soleil",
+      "category": "paysage",
+      "title": "Forest Light"
+    },
+    {
       "id": 10,
-      "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
-      "alt": "Portrait femme cheveux longs",
-      "category": "portrait",
-      "title": "Elegant Portrait"
+      "url": "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Paysage océan vagues",
+      "category": "paysage",
+      "title": "Ocean Waves"
     },
     {
       "id": 11,
+      "url": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1934&auto=format&fit=crop",
+      "alt": "Architecture moderne géométrique",
+      "category": "architecture",
+      "title": "Geometric Lines"
+    },
+    {
+      "id": 12,
+      "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop",
+      "alt": "Architecture bâtiment moderne ciel bleu",
+      "category": "architecture",
+      "title": "Blue Sky Building"
+    },
+    {
+      "id": 13,
+      "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Architecture pont moderne",
+      "category": "architecture",
+      "title": "Modern Bridge"
+    },
+    {
+      "id": 14,
+      "url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Architecture escalier spirale",
+      "category": "architecture",
+      "title": "Spiral Staircase"
+    },
+    {
+      "id": 15,
+      "url": "https://images.unsplash.com/photo-1486718448742-163732cd1544?q=80&w=1974&auto=format&fit=crop",
+      "alt": "Architecture façade symétrique",
+      "category": "architecture",
+      "title": "Symmetrical Facade"
+    },
+    {
+      "id": 16,
+      "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Street photography ville de nuit",
+      "category": "street",
+      "title": "Night Lights"
+    },
+    {
+      "id": 17,
       "url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=2070&auto=format&fit=crop",
       "alt": "Street photography marché urbain",
       "category": "street",
       "title": "Market Street"
     },
     {
-      "id": 12,
-      "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop",
-      "alt": "Architecture pont moderne",
-      "category": "architecture",
-      "title": "Modern Bridge"
+      "id": 18,
+      "url": "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=2069&auto=format&fit=crop",
+      "alt": "Street photography métro",
+      "category": "street",
+      "title": "Underground"
+    },
+    {
+      "id": 19,
+      "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1888&auto=format&fit=crop",
+      "alt": "Street photography urbain soir",
+      "category": "street",
+      "title": "Urban Evening"
+    },
+    {
+      "id": 20,
+      "url": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Street photography néons ville",
+      "category": "street",
+      "title": "Neon City"
     }
   ],
   "categories": [
