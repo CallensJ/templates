@@ -1,0 +1,268 @@
+/* ============================================
+   ABOUT SECTION STYLES - Lumina Template
+   Section présentation du photographe
+   ============================================ */
+
+/* ============================================
+   ABOUT CONTAINER
+   ============================================ */
+.about {
+  background-color: var(--color-gris-argent);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wrapper pour le layout deux colonnes */
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+/* ============================================
+   IMAGE CONTAINER
+   ============================================ */
+.about__image-container {
+  width: 100%;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Animation quand la section devient visible */
+.about--visible .about__image-container {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Cadre autour de l'image */
+.about__image-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  
+  /* Effet de bordure décorative */
+  padding: var(--spacing-sm);
+  background: linear-gradient(
+    135deg,
+    var(--color-noir-mat) 0%,
+    var(--color-anthracite) 100%
+  );
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-slow);
+}
+
+/* Effet zoom au hover */
+.about__image-frame:hover .about__image {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   CONTENT (Texte)
+   ============================================ */
+.about__content {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out 0.2s; /* Délai pour effet cascade */
+}
+
+/* Animation quand la section devient visible */
+.about--visible .about__content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.about__header {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Label au-dessus du titre */
+.about__label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-anthracite);
+  margin-bottom: var(--spacing-sm);
+  
+  /* Bordure décorative à gauche */
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--color-noir-mat);
+}
+
+.about__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-noir-mat);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ============================================
+   TEXT CONTENT
+   ============================================ */
+.about__text {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about__text p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.8;
+  color: var(--color-anthracite);
+  margin-bottom: var(--spacing-md);
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   STATISTIQUES
+   ============================================ */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl) 0;
+  border-top: 1px solid var(--color-gris-froid);
+  border-bottom: 1px solid var(--color-gris-froid);
+}
+
+.about__stat-item {
+  text-align: center;
+}
+
+.about__stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-noir-mat);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1;
+}
+
+.about__stat-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--color-gris-froid);
+  margin: 0;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+.about__cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about__cta .btn {
+  border-color: var(--color-noir-mat);
+  color: var(--color-noir-mat);
+}
+
+.about__cta .btn:hover {
+  background-color: var(--color-noir-mat);
+  color: var(--color-blanc-pur);
+}
+
+/* ============================================
+   RESPONSIVE - TABLETTE (768px et plus)
+   ============================================ */
+@media (min-width: 768px) {
+  /* Layout deux colonnes */
+  .about__wrapper {
+    flex-direction: row;
+    gap: var(--spacing-3xl);
+    align-items: flex-start;
+  }
+
+  .about__image-container {
+    width: 45%;
+    max-width: none;
+  }
+
+  .about__content {
+    width: 55%;
+  }
+
+  .about__title {
+    font-size: var(--fs-3xl);
+  }
+
+  .about__text p {
+    font-size: var(--fs-lg);
+  }
+
+  .about__stat-number {
+    font-size: var(--fs-4xl);
+  }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP (1024px et plus)
+   ============================================ */
+@media (min-width: 1024px) {
+  .about__wrapper {
+    gap: var(--spacing-3xl);
+  }
+
+  .about__image-container {
+    width: 40%;
+  }
+
+  .about__content {
+    width: 60%;
+  }
+
+  /* Statistiques en ligne sur grand écran */
+  .about__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* ============================================
+   EFFET DÉCORATIF (optionnel)
+   ============================================ */
+
+/* Forme décorative en arrière-plan */
+.about::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* S'assure que le contenu est au-dessus */
+.about__wrapper {
+  position: relative;
+  z-index: 1;
+}

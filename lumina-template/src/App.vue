@@ -14,7 +14,7 @@
        <Hero />
       
       <!-- About Section (à ajouter) -->
-      <!-- <About /> -->
+      <About />
       
       <!-- Gallery Section (à ajouter) -->
       <!-- <Gallery /> -->
@@ -39,7 +39,7 @@ import Navbar from './components/Navbar.vue';
 
 // Au fur et à mesure, tu décommenteras et importeras :
 import Hero from './components/Hero.vue';
-// import About from './components/About.vue';
+import About from './components/About.vue';
 // import Gallery from './components/Gallery.vue';
 // import Philosophy from './components/Philosophy.vue';
 // import Contact from './components/Contact.vue';
