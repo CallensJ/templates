@@ -1,0 +1,235 @@
+/* ============================================
+   HERO SECTION STYLES - Lumina Template
+   Section fullscreen avec image background
+   ============================================ */
+
+/* ============================================
+   HERO CONTAINER
+   ============================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ============================================
+   BACKGROUND IMAGE
+   ============================================ */
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image couvre toute la zone sans déformation */
+  object-position: center;
+}
+
+/* Overlay sombre pour améliorer la lisibilité du texte */
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0.4) 0%,
+    rgba(16, 16, 16, 0.7) 100%
+  );
+  z-index: 2;
+}
+
+/* ============================================
+   HERO CONTENT (Texte)
+   ============================================ */
+.hero__content {
+  position: relative;
+  z-index: 3; /* Au-dessus de l'image et de l'overlay */
+  width: 100%;
+  text-align: center;
+  padding: 0 var(--spacing-md);
+}
+
+.hero__text {
+  animation: slideUp 1s ease-out;
+}
+
+/* ============================================
+   TITRE PRINCIPAL
+   ============================================ */
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-blanc-pur);
+  letter-spacing: 4px;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   SOUS-TITRE
+   ============================================ */
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  color: var(--color-gris-argent);
+  margin-bottom: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+.hero__cta {
+  margin-top: var(--spacing-xl);
+}
+
+.hero__cta .btn {
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--fs-base);
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  transition: opacity var(--transition-base);
+}
+
+.hero__scroll-indicator:hover {
+  opacity: 0.7;
+}
+
+/* Mouse icon animé */
+.hero__scroll-mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid var(--color-blanc-pur);
+  border-radius: 12px;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+/* Wheel (roue) à l'intérieur de la souris */
+.hero__scroll-wheel {
+  width: 4px;
+  height: 8px;
+  background-color: var(--color-blanc-pur);
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 2s infinite;
+}
+
+/* Texte "Scroll" */
+.hero__scroll-text {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-blanc-pur);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Animation de la roue de la souris */
+@keyframes scroll-wheel {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50%) translateY(12px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+  }
+}
+
+/* Animation bounce pour le scroll indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TABLETTE (768px et plus)
+   ============================================ */
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: var(--fs-5xl);
+    letter-spacing: 6px;
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-xl);
+  }
+
+  .hero__scroll-mouse {
+    width: 28px;
+    height: 46px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP (1024px et plus)
+   ============================================ */
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 6rem; /* Encore plus grand sur desktop */
+    letter-spacing: 8px;
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-2xl);
+    max-width: 700px;
+  }
+
+  /* Effet parallax subtil sur l'image (optionnel) */
+  .hero__image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .hero:hover .hero__image {
+    transform: scale(1.05);
+  }
+}

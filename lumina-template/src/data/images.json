@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "url": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?q=80&w=2074&auto=format&fit=crop",
+    "alt": "Photographe professionnel en action",
+    "photographer": "Unsplash"
+  },
+  "about": {
+    "url": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
+    "alt": "Portrait du photographe",
+    "photographer": "Unsplash"
+  },
+  "gallery": [
+    {
+      "id": 1,
+      "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
+      "alt": "Portrait femme lumière naturelle",
+      "category": "portrait",
+      "title": "Natural Light"
+    },
+    {
+      "id": 2,
+      "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop",
+      "alt": "Portrait homme urbain",
+      "category": "portrait",
+      "title": "Urban Portrait"
+    },
+    {
+      "id": 3,
+      "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop",
+      "alt": "Paysage montagne brume",
+      "category": "paysage",
+      "title": "Misty Mountains"
+    },
+    {
+      "id": 4,
+      "url": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1934&auto=format&fit=crop",
+      "alt": "Architecture moderne géométrique",
+      "category": "architecture",
+      "title": "Geometric Lines"
+    },
+    {
+      "id": 5,
+      "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Street photography ville de nuit",
+      "category": "street",
+      "title": "Night Lights"
+    },
+    {
+      "id": 6,
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
+      "alt": "Portrait homme chemise blanche",
+      "category": "portrait",
+      "title": "Classic Portrait"
+    },
+    {
+      "id": 7,
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Paysage lac montagne lever soleil",
+      "category": "paysage",
+      "title": "Mountain Lake"
+    },
+    {
+      "id": 8,
+      "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop",
+      "alt": "Architecture bâtiment moderne ciel bleu",
+      "category": "architecture",
+      "title": "Blue Sky Building"
+    },
+    {
+      "id": 9,
+      "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1944&auto=format&fit=crop",
+      "alt": "Paysage ville coucher de soleil",
+      "category": "paysage",
+      "title": "Sunset City"
+    },
+    {
+      "id": 10,
+      "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Portrait femme cheveux longs",
+      "category": "portrait",
+      "title": "Elegant Portrait"
+    },
+    {
+      "id": 11,
+      "url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Street photography marché urbain",
+      "category": "street",
+      "title": "Market Street"
+    },
+    {
+      "id": 12,
+      "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop",
+      "alt": "Architecture pont moderne",
+      "category": "architecture",
+      "title": "Modern Bridge"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tous",
+      "label": "Tous",
+      "slug": "tous"
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait",
+      "slug": "portrait"
+    },
+    {
+      "id": "paysage",
+      "label": "Paysage",
+      "slug": "paysage"
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "slug": "architecture"
+    },
+    {
+      "id": "street",
+      "label": "Street",
+      "slug": "street"
+    }
+  ]
+}
